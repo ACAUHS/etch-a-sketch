@@ -1,8 +1,8 @@
 
 
 .grid {
-    border: 2px black solid;
-    width: 28px;
+    /* border: 2px black solid; */
+    width: 32px;
     flex-grow: 1;
 }
 
