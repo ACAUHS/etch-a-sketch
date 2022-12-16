@@ -11,6 +11,10 @@ console.log(canvas)
 
 //event listener to wait for hover
 
-document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('mouseover', () => {
+document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('dragenter', () => {
+  grid.classList.add('colour')
+}))
+
+document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('click', () => {
   grid.classList.add('colour')
 }))

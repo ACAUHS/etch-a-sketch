@@ -1,9 +1,11 @@
-
-
 .grid {
     /* border: 2px black solid; */
     width: 32px;
     flex-grow: 1;
+}
+
+.colour {
+    background-color: black;
 }
 
 #canvas {
