@@ -1,5 +1,6 @@
 //global variables
 const canvas = document.querySelector("#canvas");
+const resetButton = document.querySelector('#reset')
 
 //builds a grid
 for (let i = 0; i < 256; i++) {
