@@ -1,2 +1,2 @@
 # etch-a-sketch
-Project
+Project to help me understand DOM manipulation better

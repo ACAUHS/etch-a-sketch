@@ -1,16 +1,16 @@
 //global variables
+const canvas = document.querySelector("#canvas");
 
 //builds a grid
-
 for (let i = 0; i < 256; i++) {
   const grid = document.createElement("div");
-  const canvas = document.querySelector("#canvas");
   grid.classList.add("grid");
   canvas.appendChild(grid);
 }
+console.log(canvas)
 
 //event listener to wait for hover
-const grid = document.getElementsByClassName('grid')
-grid.addEventListener('mouseover', addColour(colour))
 
-//function that adds and selects colour
+document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('mouseover', () => {
+  grid.classList.add('colour')
+}))
