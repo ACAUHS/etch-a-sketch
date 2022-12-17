@@ -1,21 +1,30 @@
 //global variables
 const canvas = document.querySelector("#canvas");
 const resetButton = document.querySelector('#reset')
-
+let dimensions = 256;
 //builds a grid
-for (let i = 0; i < 256; i++) {
+for (let i = 0; i < dimensions; i++) {
   const grid = document.createElement("div");
   grid.classList.add("grid");
   canvas.appendChild(grid);
 }
-console.log(canvas)
 
-//event listener to wait for hover
 
-document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('dragenter', () => {
-  grid.classList.add('colour')
-}))
 
-document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('click', () => {
-  grid.classList.add('colour')
-}))
+function addColour() {
+  document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('dragenter', () => {
+    grid.classList.add('colour')
+  }))
+  
+  document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('mousedown', () => {
+    grid.classList.add('colour');
+  }))
+}
+
+addColour()
+
+function removeColour() {
+  const check = canvas.getElementsByClassName('colour')
+  console.log(check)
+  check.classList.remove('colour')
+}
