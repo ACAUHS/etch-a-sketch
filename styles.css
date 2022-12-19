@@ -11,10 +11,6 @@ header {
 
 }
 
-.grid {
-    /* border: 1px black solid; */ 
-    
-}
 
 .colour {
     background-color: black;
@@ -48,4 +44,9 @@ header {
     margin-top: 2em;
     padding: 2em;
     border-radius: 100px;
+}
+
+#reset:hover {
+    background-color: rgb(227, 227, 227);
+    cursor: pointer;
 }
