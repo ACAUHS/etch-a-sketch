@@ -2,6 +2,7 @@
 const canvas = document.querySelector("#canvas");
 const resetButton = document.querySelector('#reset')
 let dimensions = 256;
+
 //builds a grid
 for (let i = 0; i < dimensions; i++) {
   const grid = document.createElement("div");
@@ -10,7 +11,7 @@ for (let i = 0; i < dimensions; i++) {
 }
 
 
-
+// adds colour
 function addColour() {
   document.querySelectorAll('.grid').forEach(grid => grid.addEventListener('dragenter', () => {
     grid.classList.add('colour')
@@ -23,8 +24,7 @@ function addColour() {
 
 addColour()
 
-function removeColour() {
-  const check = canvas.getElementsByClassName('colour')
-  console.log(check)
-  check.classList.remove('colour')
-}
+//reset board
+document.querySelector('#reset').addEventListener('click', () => {
+  window.location.reload();
+}) 
